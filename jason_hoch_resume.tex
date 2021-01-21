@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+% \usepackage[T1]{fontenc}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
@@ -92,21 +93,23 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-  \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-\end{tabular*}
+\begin{center}
+    \textbf{\Large{Jason Hoch}} \\
+    \vspace{2pt}
+    \small{jrshoch@gmail.com \vline\hspace{0.25pt} +1\hspace{-2pt} (203)\hspace{-2pt} 482-0837}
+\end{center}
 
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug. 2012 -- Dec. 2013}
-    \resumeSubheading
-      {Birla Institute of Technology and Science}{Pilani, India}
-      {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
+      {Massachusetts Institute of Technology}{Boston, MA}
+      {Bachelor of Science, Computer Science, Theoretical Math;  GPA: 4.8/5.0}{Aug 2009 -- Jun 2013}
+      \resumeItemListStart
+        \resumeItem{Favorite classes}{Compilers, Computability Theory, Algebraic Combinatorics}
+        \resumeItem{Honors}{Putnam Honorable Mention, Battlecode Finalist}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -115,83 +118,63 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Google}{Mountain View, CA}
-      {Software Engineer}{Oct 2016 - Present}
+      {Bento}{San Francisco, GA}
+      {Co-founder}{Mar 2020 - Sept 2020}
       \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+        \resumeItem{Cross-functional coordination}
+          {Built a product that listened to Slack channels and pulled in shared GSuite, Github, Jira, Figma links. Presented users with digest of teammates' activities across tools by utilizing APIs}
+        \resumeItem{YC Summer 2020}
+          {Managed 1-2 engineering contractors, reached 15 weekly active users, raised \$100k+ pre-seed capital, integrated with 8 SaaS applications.  Synced 1000s of resources across those applications with low latency}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Newfront Insurance}{San Francisco}
+      {Senior Software Engineer, Engineering Manager}{Sept 2018 - Mar 2020}
+      \resumeItemListStart
+        \resumeItem{Hiring}
+          {Was a key decision-maker in leveling up the engineering team from 5 to 25 over 13 months}
+        \resumeItem{Mentorship}
+          {Provided mentorship to intern, junior, and senior engineers}
+        \resumeItem{Engineering Practices}
+          {Introduced Typescript, seeing the codebase go from 0\% to 90\% static types over 15 months.  Introduced CI/CD tooling, measurement, and practices.  Introduced and oversaw code review practices during the critical transition from 5 to 15 engineers.  Introduced and oversaw all logging and telemetry}
+        \resumeItem{Infrastructure}
+          {Reworked a the stateful monolithic backend to allow for high availability; audited and overhauled API for security vulnerabilities; managed introduction of GraphQL, balancing desires of engineers against those of the VP of Engineering}
+        \resumeItem{DevOps}
+          {Led an effort to reduce build times from 20 to 3 minutes. Managed a project to convert our deployment process from Heroku clone-and-build to Docker images. Transitioned the team from scrolling through logs to searching across millions of logs per day, measuring API latency, and distributed tracing capabilities}
+        \resumeItem{Support}
+          {Was the go-to engineer for the most critical production issues on a team of 25}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Palantir}{Palo Alto; Paris; New York}
+      {Engineering Lead, Forward Deployed Engineer, Software Developer}{Jul 2013 - Aug 2018}
+      \resumeItemListStart
+        \resumeItem{Hiring}
+          {Interviewed 100s of engineers.  Met with all engineers receiving an offer in NY for sell conversations}
+        \resumeItem{Mentorship}
+          {Mentored 4 interns in my first 2 years at the company}
+        \resumeItem{ETL product suite, Engineering lead}
+          {Led a team of 20 engineers across 3 time zones that managed 25 microservices deployed at dozens of Palantir customers.  Product capabilities included unit testing and CI of ETL transforms, ETL transform code VCS server, coordination of Spark jobs, ETL transform pull request and code reviews, and writing and running ETL transforms in multiple open and propietary languages}
+        \resumeItem{ETL administration, Insurance customer}
+          {Administered a Palantir stack used by 40 data scientists and data engineers.  ETL pipeline included 2500 tranforms.  Provided guidance to nascent product for map-like pipeline exploration.  Helped transition stack from Foundry 0.x to 1.x}
+        \resumeItem{Aggregations API}
+          {Developed and implemented an Elasticsearch-like JSON HTTP API for propietary MapReduce-like service.  API was consumed by 100+ engineers across the company and at dozens of Palantir customers.  Built first bridge between Foundry and Gotham products}
+        \resumeItem{Federated Data Import}
+          {Implemented 10x scale and speed improvement of federated data imports into Palantir Gotham}
       \resumeItemListEnd
       
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
-      \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-      \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-      \resumeItemListEnd
-
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Skills and Interests}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+    \resumeSubItem{Technologies}
+      {NodeJS, React, Gradle, Docker, yarn/npm, CircleCI, Datadog, Postgres, GraphQL, Terraform, k8s, Spark, Jackson, Dropwizard, Protocol Buffers, IntelliJ, Visual Studio Code, Eclipse, Github, Heroku, tmux, Vercel, LogDNA, Atlantis}
+    \resumeSubItem{Languages}
+      {Java, 5+ years; Typescript, 2+ years; SQL, Golang, Bash, Python}
+    \resumeSubItem{Interests}
+      {Math, Chess, History, Running, Markets, Cooking, Politics}
   \resumeSubHeadingListEnd
 
 %
